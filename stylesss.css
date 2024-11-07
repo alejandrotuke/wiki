@@ -1,0 +1,164 @@
+/* Reset and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  /* Ensure the page takes full height */
+    overflow-y: scroll;  /* Enable vertical scroll */
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff9c4;  /* Yellowish background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Particles container */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensures particles don't interfere with the content */
+    pointer-events: none; /* Disables interaction with particles */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffeb3b;  /* Yellow header */
+    width: 100%;
+    color: #ffffff;
+    z-index: 10; /* Keeps header on top of particles */
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #fff176;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Simple fade transition */
+}
+
+/* Container and Sidebar styles */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #ffee58;  /* Lighter yellow for sidebar */
+    border: 1px solid #fbc02d;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #f57f17;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #f57f17;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #ffeb3b;
+    color: #ffffff;
+}
+
+/* Content Section styles */
+.content {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #fbc02d;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.content section {
+    margin-bottom: 30px;
+}
+
+.content h3 {
+    font-size: 24px;
+    color: #f57f17;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Bounce animation for buttons */
+.bounce {
+    display: inline-block;
+    animation: bounce 0.5s ease-in-out;
+}
+
+.bounce:hover {
+    cursor: pointer;
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
